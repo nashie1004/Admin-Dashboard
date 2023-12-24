@@ -1,5 +1,6 @@
 import { DataGrid, GridToolbar, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
-import { Grid, Paper } from '@mui/material';
+import { Box, CssBaseline, Grid, LinearProgress, Paper, Typography } from '@mui/material';
+import { useDemoData } from '@mui/x-data-grid-generator';
 
 const columns: GridColDef[] = [
   { field: 'id', headerName: 'ID', width: 90 },
@@ -46,8 +47,21 @@ const rows = [
 ];
 
 export default function Manage() {
+  const { data } = useDemoData({
+    dataSet: 'Employee',
+    visibleFields: ['name', 'rating', 'country', 'dateCreated', 'isAdmin'],
+    rowLength: 100,
+  });
+
+  console.log(data)
+
   return (
-    <>
+    <Box>
+    <CssBaseline />
+    <Typography variant="h6" gutterBottom color={'text.secondary'}>
+      Manage
+    </Typography>
+
         <Grid item xs={12} md={4} lg={3}>
           <Paper
             sx={{
@@ -55,19 +69,24 @@ export default function Manage() {
               flexDirection: 'column',
             }}
           >
+            <LinearProgress />
             <DataGrid
             sx={{p: 2}}
                 rows={rows}
                 columns={columns}
-                initialState={{
-                pagination: {
-                    paginationModel: {
-                    pageSize: 6,
-                    },
-                },
-                }}
-                density="compact"
-                pageSizeOptions={[6]}
+
+                  {...data}
+
+                  initialState={{
+                  pagination: {
+                      paginationModel: {
+                      pageSize: 10,
+                      },
+                  },
+                  }}
+
+                density="standard" //standard compact
+                pageSizeOptions={[10]}
                 checkboxSelection
                 disableRowSelectionOnClick
                 slots={{
@@ -76,6 +95,8 @@ export default function Manage() {
             />
           </Paper>
         </Grid>
-    </>
+
+        
+    </Box>
   );
 }

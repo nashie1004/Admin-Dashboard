@@ -1,5 +1,4 @@
-import { Copyright } from '@mui/icons-material';
-import { Grid, Paper } from '@mui/material';
+import { Box, CssBaseline, Grid, Paper, Typography } from '@mui/material';
 import Deposits from './Deposits';
 import Orders from './Orders';
 import LinearChart from './LineChart';
@@ -8,11 +7,16 @@ import PieChart from './Chart';
 export default function Dashboard() {
 
   function _RenderBody(){
-    return <>
+    return <Box>
       {/* <h1>
         Dashboard
       </h1>
       <Button variant="contained">Hello world</Button>; */}
+
+<CssBaseline />
+    <Typography variant="h6" gutterBottom color={'text.secondary'}>
+      Dashboard
+    </Typography>
 
       <Grid container spacing={3}>
         {/* Chart */}
@@ -42,24 +46,23 @@ export default function Dashboard() {
           </Paper>
         </Grid>
         {/* Recent Orders */}
-        <Grid item xs={12}>
+        <Grid item>
           <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
             <Orders />
           </Paper>
         </Grid>
-      </Grid>
-        <Grid item xs={12}>
+        <Grid item >
           <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
             <PieChart />
           </Paper>
         </Grid>
-      <Copyright sx={{ pt: 4 }} />
-    </>
+      </Grid>
+    </Box>
   }
 
   return (
-    <div>
+    <>
       {_RenderBody()}
-    </div>
+    </>
   )
 }

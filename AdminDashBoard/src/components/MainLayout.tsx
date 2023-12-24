@@ -14,11 +14,17 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import Sidebar from './Sidebar';
-import { Avatar } from '@mui/material';
-import { deepOrange, deepPurple } from '@mui/material/colors';
+import { Avatar, ListItemIcon, MenuItem, MenuList, Paper, Tooltip } from '@mui/material';
+import { deepOrange, deepPurple, lightBlue } from '@mui/material/colors';
 import { Outlet } from 'react-router-dom';
 import Loading from './Loading';
 import MuiAppBar from '@mui/material/AppBar';
+import Copyright from './Copyright';
+import Menu from '@mui/material/Menu';
+import { Logout } from '@mui/icons-material';
+
+import { LocalizationProvider } from '@mui/x-date-pickers';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
 
 const drawerWidth = 240;
 
@@ -81,89 +87,133 @@ export default function MainLayout() {
     setOpen(!open);
   };
 
-  return <>
-    <ThemeProvider theme={defaultTheme}>
-      <Box sx={{ display: 'flex', width: 1 }}>
-        <CssBaseline />
+  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+  const openEl = Boolean(anchorEl);
 
-        <AppBar position="absolute" open={open}>
-          <Toolbar
-            sx={{
-              pr: '24px', // keep right padding when drawer closed
-            }}
-          >
-            <IconButton
-              edge="start"
-              color="inherit"
-              aria-label="open drawer"
-              onClick={toggleDrawer}
+  return <>
+    <LocalizationProvider dateAdapter={AdapterDayjs}>
+      <ThemeProvider theme={defaultTheme}>
+        <Box sx={{ display: 'flex', width: 1 }}>
+          <CssBaseline />
+          <AppBar position="absolute" open={open} color='info' >
+            <Toolbar
               sx={{
-                marginRight: '36px',
-                ...(open && { display: 'none' }),
+                pr: '24px', // keep right padding when drawer closed
               }}
             >
-              <MenuIcon />
-            </IconButton>
-            <Typography
-              component="h1"
-              variant="h6"
-              color="inherit"
-              noWrap
-              sx={{ flexGrow: 1 }}
+              <IconButton
+                edge="start"
+                color="inherit"
+                aria-label="open drawer"
+                onClick={toggleDrawer}
+                sx={{
+                  marginRight: '36px',
+                  ...(open && { display: 'none' }),
+                }}
+              >
+                <MenuIcon />
+              </IconButton>
+              <Typography
+                component="h1"
+                variant="h6"
+                color="inherit"
+                noWrap
+                sx={{ flexGrow: 1 }}
+              >
+                Admin Dashboard
+              </Typography>
+              <IconButton color="inherit">
+                <Badge badgeContent={4} color="secondary">
+                  <NotificationsIcon />
+                </Badge>
+              </IconButton>
+              <IconButton 
+              color="inherit" 
+              id="demo-positioned-button"
+              aria-controls={openEl ? 'demo-positioned-menu' : undefined}
+              aria-haspopup="true"
+              aria-expanded={openEl ? 'true' : undefined}
+              onClick={(e) => setAnchorEl(e.currentTarget)}
+              >
+                <Avatar sx={{ bgcolor: deepOrange[500] }}>OP</Avatar>
+              </IconButton>
+                
+              <Menu 
+              id="demo-positioned-menu"
+              anchorEl={anchorEl}
+              open={openEl}
+              aria-labelledby="demo-positioned-button"
+              anchorOrigin={{
+                vertical: 'bottom',
+                horizontal: 'left',
+              }}
+              transformOrigin={{
+                vertical: 'bottom',
+                horizontal: 'left',
+              }}
+              >
+                <MenuItem onClick={() => setAnchorEl(null)}>Profile</MenuItem>
+                <MenuItem onClick={() => setAnchorEl(null)}>My account</MenuItem>
+                <MenuItem onClick={() => setAnchorEl(null)}>
+                  <ListItemIcon>
+                    <Logout fontSize="small" />
+                  </ListItemIcon>
+                  Logout
+                </MenuItem>
+              </Menu>
+              
+            </Toolbar>
+          </AppBar>
+          {/* This opens or close sidebar */}
+          <Drawer variant="permanent" open={open} PaperProps={{
+            // sx: {
+            //   bgcolor: '#0288d1'               
+            // }
+          }}>
+            <Toolbar
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'flex-end',
+                px: [1],
+              }}
             >
-              Dashboard
-            </Typography>
-            <IconButton color="inherit">
-              <Badge badgeContent={4} color="secondary">
-                <NotificationsIcon />
-              </Badge>
-            </IconButton>
-            <IconButton color="inherit">
-              <Avatar sx={{ bgcolor: deepOrange[500] }}>OP</Avatar>
-            </IconButton>
-          </Toolbar>
-        </AppBar>
-        <Drawer variant="permanent" open={open}>
-          <Toolbar
+              {/* <Typography variant='h5' align='left'>Test</Typography> */}
+              <IconButton onClick={toggleDrawer}>
+                <ChevronLeftIcon />
+              </IconButton>
+            </Toolbar>
+            <Divider />
+            <List component="nav">
+              <Sidebar />
+            </List>
+          </Drawer>
+          <Box
+            component="main"
             sx={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'flex-end',
-              px: [1],
+              backgroundColor: (theme) =>
+                theme.palette.mode === 'light'
+                  ? theme.palette.grey[100]
+                  : theme.palette.grey[900],
+              flexGrow: 1,
+              height: '100vh',
+              overflow: 'auto',
             }}
           >
-            <IconButton onClick={toggleDrawer}>
-              <ChevronLeftIcon />
-            </IconButton>
-          </Toolbar>
-          <Divider />
-          <List component="nav">
-            <Sidebar />
-          </List>
-        </Drawer>
-        <Box
-          component="main"
-          sx={{
-            backgroundColor: (theme) =>
-              theme.palette.mode === 'light'
-                ? theme.palette.grey[100]
-                : theme.palette.grey[900],
-            flexGrow: 1,
-            height: '100vh',
-            overflow: 'auto',
-          }}
-        >
-          <Toolbar />
-          <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
+            <Toolbar />
+            <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
 
-            <React.Suspense fallback={<Loading />}>
-              {/* Main Content */}
-              <Outlet />
-            </React.Suspense>
+              <React.Suspense fallback={<Loading />}>
+                {/* Main Content */}
+                <Outlet />
+              </React.Suspense>
 
-          </Container>
+            </Container>
+        <Copyright sx={{ mb: 4 }} />
+
+          </Box>
         </Box>
-      </Box>
-    </ThemeProvider>
+      </ThemeProvider>
+    </LocalizationProvider>
   </>;
 }

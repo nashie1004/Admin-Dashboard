@@ -3,6 +3,7 @@ import Paths from '../utils/constants/paths';
 import Register from '../views/register/components/Register';
 import Login from '../views/login/components/Login';
 import MainLayout from '../components/MainLayout';
+import Manage from '../views/manage/components/Manage';
 
 const Settings = lazy(() => import("../views/settings/components/Settings"));
 const Discover = lazy(() => import("../views/discover/components/Discover"));
@@ -34,6 +35,10 @@ const routes = [
       {
         path: Paths.Discover,
         element: <Discover />,
+      },
+      {
+        path: Paths.Manage,
+        element: <Manage />,
       },
       {
         path: Paths.Settings,

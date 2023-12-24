@@ -4,6 +4,7 @@ enum Paths {
     Login = '/login',
     Register = '/register',
     Discover = '/discover',
+    Manage = '/manage',
     Settings = '/settings',
 }
 

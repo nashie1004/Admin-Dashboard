@@ -17,18 +17,18 @@ const sideBarRoutes: ISideBarRoutes[] = [
       routeName: "Discover",
       routeElement: <ShoppingCartIcon />
     },
+    // {
+    //   routePath: "/",
+    //   routeName: "Tasks",
+    //   routeElement: <PeopleIcon />
+    // },
+    // {
+    //   routePath: "/",
+    //   routeName: "Assign",
+    //   routeElement: <AssignmentIcon />
+    // },
     {
-      routePath: "/",
-      routeName: "Tasks",
-      routeElement: <PeopleIcon />
-    },
-    {
-      routePath: "/",
-      routeName: "Assign",
-      routeElement: <AssignmentIcon />
-    },
-    {
-      routePath: "/",
+      routePath: "/manage",
       routeName: "Manage",
       routeElement: <BarChartIcon />
     },

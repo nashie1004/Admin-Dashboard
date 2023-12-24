@@ -32,7 +32,7 @@ export default function Sidebar() {
             ? "pending"
             : ""
         }>
-          <ListItemButton>
+          <ListItemButton sx={{ height: 40 }}>
             <ListItemIcon>
               {item.routeElement}
             </ListItemIcon>

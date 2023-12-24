@@ -1,9 +1,9 @@
 import { Copyright } from '@mui/icons-material';
 import { Grid, Paper } from '@mui/material';
-import Button from '@mui/material/Button';
-import Chart from './Chart';
 import Deposits from './Deposits';
 import Orders from './Orders';
+import LinearChart from './LineChart';
+import PieChart from './Chart';
 
 export default function Dashboard() {
 
@@ -25,7 +25,7 @@ export default function Dashboard() {
               height: 240,
             }}
           >
-            <Chart />
+            <LinearChart />
           </Paper>
         </Grid>
         {/* Recent Deposits */}
@@ -48,6 +48,11 @@ export default function Dashboard() {
           </Paper>
         </Grid>
       </Grid>
+        <Grid item xs={12}>
+          <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
+            <PieChart />
+          </Paper>
+        </Grid>
       <Copyright sx={{ pt: 4 }} />
     </>
   }

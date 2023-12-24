@@ -1,5 +1,5 @@
-import ErrorPage from "../components/ErrorPage";
-import Root from "../components/Root";
+import ErrorPage from "../components/layout/ErrorPage";
+import Root from "../components/layout/Root";
 import Dashboard from "../views/dashboard/components/Dashboard";
 import Login from "../views/login/components/Login";
 import Register from "../views/register/components/Register";
@@ -24,12 +24,12 @@ const routes = [
 
     children: [
       {
-        path: "settings/",
-        element: <Settings />,
+        path: "",
+        element: <Dashboard />,
       },
       {
-        path: "dashboard/",
-        element: <Dashboard />,
+        path: "settings/",
+        element: <Settings />,
       },
     ]
   }

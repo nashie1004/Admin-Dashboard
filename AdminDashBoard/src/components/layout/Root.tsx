@@ -1,5 +1,5 @@
 import { Outlet, redirect } from "react-router-dom";
-import UpperDashboard from "./UpperDashboard";
+import MainLayout from "./MainLayout";
 
 export default function Root() {
 
@@ -12,9 +12,9 @@ export default function Root() {
 
   return (
     <div>
-      <UpperDashboard />
-      {/* <Sidebar /> */}
+      <MainLayout>
         <Outlet />
+      </MainLayout >
     </div>
   )
 }

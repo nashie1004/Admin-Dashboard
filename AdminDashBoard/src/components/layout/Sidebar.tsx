@@ -9,29 +9,34 @@ import BarChartIcon from '@mui/icons-material/BarChart';
 import LayersIcon from '@mui/icons-material/Layers';
 import ListSubheader from '@mui/material/ListSubheader';
 import AssignmentIcon from '@mui/icons-material/Assignment';
+import { Divider } from '@mui/material';
 
 export default function Sidebar() {
   return (
     <>
     <div className="d-flex align-items-start">
       <div className="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-          <Link to='/dashboard'>Dashboard</Link>
-          <Link to='/settings'>Settings</Link>
       </div>
     </div>
     
-    <ListItemButton>
-      <ListItemIcon>
-        <DashboardIcon />
-      </ListItemIcon>
-      <ListItemText primary="Dashboard" />
-    </ListItemButton>
-    <ListItemButton>
-      <ListItemIcon>
-        <ShoppingCartIcon />
-      </ListItemIcon>
-      <ListItemText primary="Orders" />
-    </ListItemButton>
+    <Link to='/'>
+      <ListItemButton>
+        <ListItemIcon>
+          <DashboardIcon />
+        </ListItemIcon>
+        <ListItemText primary="Dashboard" />
+      </ListItemButton>
+    </Link>
+
+    <Link to='/settings'>
+      <ListItemButton>
+        <ListItemIcon>
+          <ShoppingCartIcon />
+        </ListItemIcon>
+        <ListItemText primary="Settings" />
+      </ListItemButton>
+    </Link>
+
     <ListItemButton>
       <ListItemIcon>
         <PeopleIcon />
@@ -50,6 +55,7 @@ export default function Sidebar() {
       </ListItemIcon>
       <ListItemText primary="Integrations" />
     </ListItemButton>
+    <Divider sx={{ my: 1 }} />
 
     <ListSubheader component="div" inset>
       Saved reports

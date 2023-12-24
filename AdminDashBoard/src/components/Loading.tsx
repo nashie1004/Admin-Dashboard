@@ -2,7 +2,7 @@ import { CircularProgress, Container } from '@mui/material'
 
 export default function Loading() {
   return (
-    <Container>
+    <Container fullWidth>
       <CircularProgress />
     </Container>
   )

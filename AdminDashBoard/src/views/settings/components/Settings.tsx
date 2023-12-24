@@ -41,6 +41,69 @@ export default function Settings() {
         >
           <CircularProgress color="inherit" />
         </Backdrop>
+        
+        <Paper elevation={3} sx={{ mb: 2, mt: 1, p: 2 }}>
+          <Grid container spacing={0}>
+            <Grid item xs={0} sm={0}>
+              <TextField
+                autoComplete="given-name"
+                name="firstName"
+                required
+                fullWidth
+                id="firstName"
+                label="First Name"
+                autoFocus
+              />
+            </Grid>
+            <Grid item xs={0} sm={0}>
+              <TextField
+              required
+              id="outlined-required"
+              label="Password"
+              defaultValue=""
+              />
+            </Grid>
+            <Grid item xs={0} sm={0}>
+              <TextField
+                required
+                fullWidth
+                id="email"
+                label="Email Address"
+                name="email"
+                autoComplete="email"
+              />
+            </Grid>
+            <Grid item xs={0} sm={0}>
+              <FormControl sx={{ minWidth: 150 }}>
+                <InputLabel id="demo-simple-select-label">Age</InputLabel>
+                <Select
+                  labelId="demo-simple-select-label"
+                  id="demo-simple-select"
+                  value={2}
+                  label="Age"
+                  onChange={() => {}}
+                >
+                  <MenuItem value={10}>Ten</MenuItem>
+                  <MenuItem value={20}>Twenty</MenuItem>
+                  <MenuItem value={30}>Thirty</MenuItem>
+                </Select>
+              </FormControl>
+            </Grid>
+            <Grid item xs={0} sm={0}>
+              <DatePicker label="Birthday" />
+            </Grid>
+            <Grid item xs={0} sm={0}>
+            </Grid>
+
+
+            <Grid item >
+              <Button fullWidth variant="contained" endIcon={<SendIcon />}>
+                Send
+              </Button>
+            </Grid>
+
+          </Grid>
+        </Paper>
 
         <Paper elevation={3}>
           

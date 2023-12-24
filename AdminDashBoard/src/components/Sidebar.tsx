@@ -1,10 +1,11 @@
-import { Link } from 'react-router-dom'
+import { Link,   NavLink} from 'react-router-dom'
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import { Divider } from '@mui/material';
 import ListSubheader from '@mui/material/ListSubheader';
-import sideBarRoutes from '../../routes/sideBarRoutes';
+import sideBarRoutes from '../routes/sideBarRoutes';
+
 
 export default function Sidebar() {
   return (
@@ -23,14 +24,21 @@ export default function Sidebar() {
             Saved reports
           </ListSubheader>
         </>}
-        <Link to={item.routePath} key={i}>
+        <NavLink to={item.routePath} key={i} 
+          className={({ isActive, isPending }) =>
+          isActive
+            ? "active"
+            : isPending
+            ? "pending"
+            : ""
+        }>
           <ListItemButton>
             <ListItemIcon>
               {item.routeElement}
             </ListItemIcon>
             <ListItemText primary={item.routeName} />
           </ListItemButton>
-        </Link>
+        </NavLink>
       </>
         
     ))}

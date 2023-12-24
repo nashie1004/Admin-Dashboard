@@ -38,13 +38,8 @@ const sideBarRoutes: ISideBarRoutes[] = [
       routeElement: <LayersIcon />
     },
     {
-      routePath: "/register",
-      routeName: "Register",
-      routeElement: <BarChartIcon />
-    },
-    {
       routePath: "/login",
-      routeName: "Login",
+      routeName: "Logout",
       routeElement: <PeopleIcon />
     },
   ]

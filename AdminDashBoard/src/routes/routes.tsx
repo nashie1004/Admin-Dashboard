@@ -1,11 +1,13 @@
-import ErrorPage from "../components/errorPage/ErrorPage";
-import Root from "../components/root/Root";
-import Paths from "../utils/constants/paths";
-import Dashboard from "../views/dashboard/components/Dashboard";
-import Discover from "../views/discover/components/Discover";
-import Login from "../views/login/components/Login";
-import Register from "../views/register/components/Register";
-import Settings from "../views/settings/components/Settings";
+import { lazy } from 'react';
+import Paths from '../utils/constants/paths';
+import Register from '../views/register/components/Register';
+import Login from '../views/login/components/Login';
+import MainLayout from '../components/MainLayout';
+
+const Settings = lazy(() => import("../views/settings/components/Settings"));
+const Discover = lazy(() => import("../views/discover/components/Discover"));
+const Dashboard = lazy(() => import("../views/dashboard/components/Dashboard"));
+const ErrorPage = lazy(() => import("../components/ErrorPage"));
 
 const routes = [
   {
@@ -20,7 +22,7 @@ const routes = [
   },
   {
     path: Paths.Default,
-    element: <Root />,
+    element: <MainLayout />,
     errorElement: <ErrorPage />,
     //action: isAuthenticatedAction,
 

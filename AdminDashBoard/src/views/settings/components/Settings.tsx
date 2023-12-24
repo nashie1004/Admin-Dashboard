@@ -331,7 +331,6 @@ export default function Settings() {
   return (
     <Box sx={{ width: '100%' }}>
       <Paper sx={{ width: '100%', mb: 2 }}>
-      <CircularProgress />
 
         <EnhancedTableToolbar numSelected={selected.length} />
         <TableContainer>

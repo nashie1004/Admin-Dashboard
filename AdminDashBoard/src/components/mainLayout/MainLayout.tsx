@@ -15,7 +15,9 @@ import Link from '@mui/material/Link';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import NotificationsIcon from '@mui/icons-material/Notifications';
-import Sidebar from './Sidebar';
+import Sidebar from '../sidebar/Sidebar';
+import { Avatar } from '@mui/material';
+import { deepOrange, deepPurple } from '@mui/material/colors';
 
 
 function Copyright(props) {
@@ -121,6 +123,9 @@ export default function MainLayout({ children }) {
               <Badge badgeContent={4} color="secondary">
                 <NotificationsIcon />
               </Badge>
+            </IconButton>
+            <IconButton color="inherit">
+              <Avatar sx={{ bgcolor: deepOrange[500] }}>OP</Avatar>
             </IconButton>
           </Toolbar>
         </AppBar>

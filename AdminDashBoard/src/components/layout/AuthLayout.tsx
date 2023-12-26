@@ -13,7 +13,7 @@ export default function AuthLayout() {
         <CssBaseline />
         <React.Suspense fallback={<Loading />}>
           <Outlet />
-          <Copyright sx={{ mt: 3 }} />
+          <Copyright sx={{ mt: 4 }} />
 
         </React.Suspense>
       </Box>

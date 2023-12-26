@@ -1,5 +1,5 @@
 import { DataGrid, GridToolbar, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
-import { Box, CssBaseline, Grid, LinearProgress, Paper, Typography } from '@mui/material';
+import { Box, CssBaseline, Dialog, Grid, LinearProgress, Paper, Typography } from '@mui/material';
 import { useDemoData } from '@mui/x-data-grid-generator';
 
 const columns: GridColDef[] = [
@@ -52,8 +52,6 @@ export default function Manage() {
     visibleFields: ['name', 'rating', 'country', 'dateCreated', 'isAdmin'],
     rowLength: 100,
   });
-
-  console.log(data)
 
   return (
     <Box>

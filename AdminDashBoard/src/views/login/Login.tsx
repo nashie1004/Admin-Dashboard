@@ -77,7 +77,7 @@ export default function LoginIn() {
             </Button>
             <Grid container>
               <Grid item xs>
-                <Link to={Paths.Dashboard}>
+                <Link to={Paths.Auth + Paths.ForgotPassword}>
                   Forgot password?
                 </Link>
               </Grid>

@@ -12,6 +12,7 @@ export default function Copyright(props) {
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
+      https://wrapbootstrap.com/theme/materialpro-react-admin-template-WB0869819
     </Typography>
   </>
   )

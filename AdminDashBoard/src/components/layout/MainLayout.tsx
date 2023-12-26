@@ -35,7 +35,7 @@ export default function MainLayout() {
             <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
               <React.Suspense fallback={<Loading />}>
                 <Outlet />
-                <Copyright sx={{ mb: 4 }} />
+                <Copyright sx={{ mb: 4, mt: 4 }} />
               </React.Suspense>
             </Container>
           </Box>

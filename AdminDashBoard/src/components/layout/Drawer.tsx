@@ -7,7 +7,8 @@ import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import Sidebar from './Sidebar';
-import { Toolbar } from '@mui/material';
+import { Toolbar, Typography } from '@mui/material';
+import Profile from '../Profile';
 
 const DrawerFn = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' })(
     ({ theme, open }) => ({
@@ -28,7 +29,7 @@ const DrawerFn = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open
           }),
           width: theme.spacing(7),
           [theme.breakpoints.up('sm')]: {
-            width: theme.spacing(9),
+            width: theme.spacing(8),
           },
         }),
       },
@@ -58,10 +59,13 @@ export default function Drawer() {
             px: [1],
             }}
         >
-            {/* <Typography variant='h5' align='left'>Test</Typography> */}
-            <IconButton onClick={toggleDrawer}>
+          <IconButton>
+            <Profile />
+          </IconButton>
+          <Typography>Full Name</Typography>
+          <IconButton onClick={toggleDrawer} sx={{ml: 5}}>
             <ChevronLeftIcon />
-            </IconButton>
+          </IconButton>
         </Toolbar>
         <Divider />
         <List component="nav">

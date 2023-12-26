@@ -1,5 +1,12 @@
 import { lazy } from 'react';
-import { Paths } from '../utils/type';
+import { Paths } from './constants';
+
+// Sidebar
+import DashboardIcon from '@mui/icons-material/Dashboard';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import PeopleIcon from '@mui/icons-material/People';
+import BarChartIcon from '@mui/icons-material/BarChart';
+import LayersIcon from '@mui/icons-material/Layers';
 
 import AuthLayout from '../components/layout/AuthLayout';
 const Register = lazy(() => import('../views/register/Register'))
@@ -14,6 +21,7 @@ const Manage = lazy(() => import("../views/manage/Manage"));
 
 const ErrorPage = lazy(() => import("../components/layout/ErrorPage"));
 
+// React router
 const routes = [
   // Auth
   {
@@ -63,4 +71,33 @@ const routes = [
   }
 ]
 
-export default routes
+// Sidebar links
+const sideBarRoutes: SideBarRoutes[] = [
+  {
+    routePath: Paths.Dashboard,
+    routeName: "Dashboard",
+    routeElement: <DashboardIcon />
+  },
+  {
+    routePath: Paths.Discover,
+    routeName: "Discover",
+    routeElement: <ShoppingCartIcon />
+  },
+  {
+    routePath: Paths.Manage,
+    routeName: "Manage",
+    routeElement: <BarChartIcon />
+  },
+  {
+    routePath: Paths.Settings,
+    routeName: "Settings",
+    routeElement: <LayersIcon />
+  },
+  {
+    routePath: Paths.Auth + Paths.Login,
+    routeName: "Logout",
+    routeElement: <PeopleIcon />
+  },
+]
+
+export {sideBarRoutes, routes}

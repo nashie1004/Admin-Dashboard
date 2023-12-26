@@ -1,9 +1,13 @@
-import { CircularProgress, Container } from '@mui/material'
+import { CircularProgress, Box } from '@mui/material'
 
 export default function Loading() {
   return (
-    <Container fullWidth>
+    <Box  
+    display="flex"
+    justifyContent="center"
+    alignItems="center"
+    >
       <CircularProgress />
-    </Container>
+    </Box>
   )
 }

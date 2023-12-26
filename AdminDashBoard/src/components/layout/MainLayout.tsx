@@ -1,7 +1,6 @@
 import * as React from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
 import { ThemeProvider } from '@mui/material/styles';
 import Container from '@mui/material/Container';
 import { Outlet } from 'react-router-dom';
@@ -10,9 +9,8 @@ import Copyright from './Copyright';
 
 import { LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
-import { defaultTheme } from '../../utils/theme';
+import { defaultTheme, darkTheme } from '../../utils/theme';
 import Drawer from './Drawer';
-
 
 export default function MainLayout() {
 
@@ -21,10 +19,7 @@ export default function MainLayout() {
       <ThemeProvider theme={defaultTheme}>
         <Box sx={{ display: 'flex', width: 1 }}>
           <CssBaseline />
-          
-          {/* Sidebar/Drawer */}
           <Drawer />
-          
           <Box
             component="main"
             sx={{
@@ -37,18 +32,12 @@ export default function MainLayout() {
               overflow: 'auto',
             }}
           >
-            <Toolbar />
             <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
-
               <React.Suspense fallback={<Loading />}>
-                {/* Main Content here */}
                 <Outlet />
-
+                <Copyright sx={{ mb: 4 }} />
               </React.Suspense>
-
             </Container>
-            <Copyright sx={{ mb: 4 }} />
-
           </Box>
         </Box>
       </ThemeProvider>

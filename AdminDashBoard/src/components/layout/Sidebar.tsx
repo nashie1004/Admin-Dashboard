@@ -4,9 +4,9 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import { Box, Divider, Typography } from '@mui/material';
 import ListSubheader from '@mui/material/ListSubheader';
-import sideBarRoutes from '../../routes/sideBarRoutes';
 import { lightBlue } from '@mui/material/colors';
-
+import {sideBarRoutes} from '../../utils/routes'
+import { Paths } from '../../utils/constants';
 
 export default function Sidebar() {
   return (
@@ -15,7 +15,7 @@ export default function Sidebar() {
     {sideBarRoutes.map((item, i) => (
 
       <>
-        {item.routePath === "/settings" && <>
+        {item.routePath === `${Paths.Settings}` && <>
           <Divider sx={{ my: 1 }} />
           <ListSubheader component="div" inset>
             Saved reports

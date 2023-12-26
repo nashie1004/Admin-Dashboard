@@ -12,8 +12,6 @@ import {
 } from "react-router-dom";
 import { routes } from './utils/routes';
 
-
-
 const router = createBrowserRouter(routes);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(

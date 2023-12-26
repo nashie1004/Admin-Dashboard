@@ -17,7 +17,7 @@ export default function Sidebar() {
       <>
         {item.routePath === `${Paths.Settings}` && <>
           <Divider sx={{ my: 1 }} />
-          <ListSubheader component="div" inset>
+          <ListSubheader component="div" inset key={i}>
             Saved reports
           </ListSubheader>
         </>}

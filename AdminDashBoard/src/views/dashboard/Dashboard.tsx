@@ -10,7 +10,7 @@ export default function Dashboard() {
     <Box>
     <CssBaseline />
     <Typography variant="h6" gutterBottom color={'text.secondary'}>
-      Dashboard
+      Dashboard 
     </Typography>
 
       <Grid container spacing={3}>

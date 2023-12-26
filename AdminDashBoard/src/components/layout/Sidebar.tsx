@@ -4,7 +4,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import { Box, Divider, Typography } from '@mui/material';
 import ListSubheader from '@mui/material/ListSubheader';
-import sideBarRoutes from '../routes/sideBarRoutes';
+import sideBarRoutes from '../../routes/sideBarRoutes';
 import { lightBlue } from '@mui/material/colors';
 
 

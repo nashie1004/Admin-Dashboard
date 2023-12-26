@@ -12,7 +12,8 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import Copyright from '../../../components/Copyright';
+import Copyright from '../../components/layout/Copyright';
+import { Paths } from '../../utils/type';
 
 // TODO remove, this demo shouldn't need to reset the theme.
 const defaultTheme = createTheme();
@@ -106,7 +107,7 @@ export default function Register() {
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
-                <Link to='/login'>
+                <Link to={Paths.Auth + Paths.Login}>
                   Already have an account? Sign in
                 </Link>
               </Grid>

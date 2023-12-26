@@ -1,19 +1,14 @@
 import { Box, CssBaseline, Grid, Paper, Typography } from '@mui/material';
-import Deposits from './Deposits';
-import Orders from './Orders';
-import LinearChart from './LineChart';
-import PieChart from './Chart';
+import Deposits from '../../components/Deposits';
+import Orders from '../../components/Orders';
+import LinearChart from '../../components/LineChart';
+import PieChart from '../../components/Chart';
 
 export default function Dashboard() {
 
-  function _RenderBody(){
-    return <Box>
-      {/* <h1>
-        Dashboard
-      </h1>
-      <Button variant="contained">Hello world</Button>; */}
-
-<CssBaseline />
+  return (
+    <Box>
+    <CssBaseline />
     <Typography variant="h6" gutterBottom color={'text.secondary'}>
       Dashboard
     </Typography>
@@ -58,11 +53,5 @@ export default function Dashboard() {
         </Grid>
       </Grid>
     </Box>
-  }
-
-  return (
-    <>
-      {_RenderBody()}
-    </>
   )
 }

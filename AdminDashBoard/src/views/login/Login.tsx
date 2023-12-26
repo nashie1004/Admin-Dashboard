@@ -11,7 +11,8 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
-import Copyright from '../../../components/Copyright';
+import Copyright from '../../components/layout/Copyright';
+import { Paths } from '../../utils/type';
 // TODO remove, this demo shouldn't need to reset the theme.
 
 const defaultTheme = createTheme();
@@ -79,12 +80,12 @@ export default function LoginIn() {
             </Button>
             <Grid container>
               <Grid item xs>
-                <Link to='/'>
+                <Link to={Paths.Dashboard}>
                   Forgot password?
                 </Link>
               </Grid>
               <Grid item>
-                <Link to='/register'>
+                <Link to={Paths.Auth + Paths.Register}>
                   {"Don't have an account? Sign Up"}
                 </Link>
               </Grid>

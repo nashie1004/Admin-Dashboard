@@ -3,42 +3,32 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import PeopleIcon from '@mui/icons-material/People';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import LayersIcon from '@mui/icons-material/Layers';
-import AssignmentIcon from '@mui/icons-material/Assignment';
-import ISideBarRoutes from "../utils/types/sideBarTypes";
+import { Paths, SideBarRoutes } from '../utils/type';
 
-const sideBarRoutes: ISideBarRoutes[] = [
+
+const sideBarRoutes: SideBarRoutes[] = [
     {
-      routePath: "/",
+      routePath: Paths.Dashboard,
       routeName: "Dashboard",
       routeElement: <DashboardIcon />
     },
     {
-      routePath: "/discover",
+      routePath: Paths.Discover,
       routeName: "Discover",
       routeElement: <ShoppingCartIcon />
     },
-    // {
-    //   routePath: "/",
-    //   routeName: "Tasks",
-    //   routeElement: <PeopleIcon />
-    // },
-    // {
-    //   routePath: "/",
-    //   routeName: "Assign",
-    //   routeElement: <AssignmentIcon />
-    // },
     {
-      routePath: "/manage",
+      routePath: Paths.Manage,
       routeName: "Manage",
       routeElement: <BarChartIcon />
     },
     {
-      routePath: "/settings",
+      routePath: Paths.Settings,
       routeName: "Settings",
       routeElement: <LayersIcon />
     },
     {
-      routePath: "/login",
+      routePath: Paths.Auth + Paths.Login,
       routeName: "Logout",
       routeElement: <PeopleIcon />
     },

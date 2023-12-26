@@ -1,31 +1,46 @@
 import { lazy } from 'react';
-import Paths from '../utils/constants/paths';
-import Register from '../views/register/components/Register';
-import Login from '../views/login/components/Login';
-import MainLayout from '../components/MainLayout';
-import Manage from '../views/manage/components/Manage';
+import { Paths } from '../utils/type';
 
-const Settings = lazy(() => import("../views/settings/components/Settings"));
-const Discover = lazy(() => import("../views/discover/components/Discover"));
-const Dashboard = lazy(() => import("../views/dashboard/components/Dashboard"));
-const ErrorPage = lazy(() => import("../components/ErrorPage"));
+import AuthLayout from '../components/layout/AuthLayout';
+const Register = lazy(() => import('../views/register/Register'))
+const Login = lazy(() => import('../views/login/Login'))
+const ForgotPassword = lazy(() => import('../views/forgotPassword/ForgotPassword'))
+
+import MainLayout from '../components/layout/MainLayout';
+const Settings = lazy(() => import("../views/settings/Settings"));
+const Discover = lazy(() => import("../views/discover/Discover"));
+const Dashboard = lazy(() => import("../views/dashboard/Dashboard"));
+const Manage = lazy(() => import("../views/manage/Manage"));
+
+const ErrorPage = lazy(() => import("../components/layout/ErrorPage"));
 
 const routes = [
+  // Auth
   {
-    path: Paths.Register,
-    element: <Register />,
+    paths: Paths.Auth,
+    element: <AuthLayout />,
     errorElement: <ErrorPage />,
+    children: [
+      {
+        path: Paths.Auth + Paths.Register,
+        element: <Register />,
+      },
+      {
+        path: Paths.Auth + Paths.Login,
+        element: <Login />,
+      },
+      {
+        path: Paths.Auth + Paths.ForgotPassword,
+        element: <ForgotPassword />,
+      },
+    ]
   },
+
+  // Logged in
   {
-    path: Paths.Login,
-    element: <Login />,
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: Paths.Default,
+    path: Paths.Dashboard,
     element: <MainLayout />,
     errorElement: <ErrorPage />,
-    //action: isAuthenticatedAction,
 
     children: [
       {

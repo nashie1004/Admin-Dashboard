@@ -7,10 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Common\" />
-    <Folder Include="Common\Context\" />
-    <Folder Include="Common\Migrations\" />
-    <Folder Include="User\Persistence\" />
+    <Folder Include="Context\" />
+    <Folder Include="Migrations\" />
   </ItemGroup>
 
   <ItemGroup>

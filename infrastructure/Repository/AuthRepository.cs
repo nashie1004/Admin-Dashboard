@@ -1,5 +1,5 @@
 ﻿namespace infrastructure;
-public class UserRepository
+public class AuthRepository
 {
 
 }

@@ -10,3 +10,6 @@ C:\VSCode\VisualStudioCode\application\obj\Debug\net7.0\application.dll
 C:\VSCode\VisualStudioCode\application\obj\Debug\net7.0\refint\application.dll
 C:\VSCode\VisualStudioCode\application\obj\Debug\net7.0\application.pdb
 C:\VSCode\VisualStudioCode\application\obj\Debug\net7.0\ref\application.dll
+C:\VSCode\VisualStudioCode\application\bin\Debug\net7.0\domain.dll
+C:\VSCode\VisualStudioCode\application\bin\Debug\net7.0\domain.pdb
+C:\VSCode\VisualStudioCode\application\obj\Debug\net7.0\application.csproj.CopyComplete

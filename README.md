@@ -1,5 +1,6 @@
 # https://positiwise.com/blog/clean-architecture-net-core
 # https://www.youtube.com/watch?v=1OLSE6tX71Y
+# https://juldhais.net/clean-architecture-in-asp-net-core-web-api-4e5ef0b96f99
 
 # React + TypeScript + Vite
 

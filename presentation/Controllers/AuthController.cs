@@ -6,14 +6,20 @@ namespace presentation;
 [Route("/api/[controller]")]
 public class AuthController : ControllerBase
 {
-    [HttpGet("/tesaat")]
-    public IActionResult Base123aaaawhat()
+    [HttpGet("/register")]
+    public IActionResult Register()
     {
         return Ok("Hello world");
     }
 
-    [HttpGet("/authTest")]
-    public IActionResult GetTest123()
+    [HttpGet("/login")]
+    public IActionResult Login()
+    {
+        return Ok("Hello world");
+    }
+    
+    [HttpGet("/forgotPassword")]
+    public IActionResult ForgotPassword()
     {
         return Ok("Hello world");
     }

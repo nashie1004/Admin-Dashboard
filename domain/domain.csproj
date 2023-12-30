@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Contants\" />
+    <Folder Include="Constants\" />
   </ItemGroup>
 
 </Project>

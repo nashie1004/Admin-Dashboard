@@ -1,12 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
 namespace presentation;
+
 [ApiController]
 [Route("/api/[controller]")]
-public class RegisterController : ControllerBase
+public class UserController : ControllerBase
 {
-    [HttpGet("/sdws")]
-    public IActionResult Baseste()
+    [HttpGet("/getUser")]
+    public IActionResult GetUser()
     {
         return Ok("Hello world");
     }

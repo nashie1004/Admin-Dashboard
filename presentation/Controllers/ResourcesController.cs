@@ -4,10 +4,10 @@ namespace presentation;
 
 [ApiController]
 [Route("/api/[controller]")]
-public class LoginController : ControllerBase
+public class ResourcesController : ControllerBase
 {
-    [HttpGet("/logg")]
-    public IActionResult Base12345()
+    [HttpGet("/resources")]
+    public IActionResult Resources()
     {
         return Ok("Hello world");
     }

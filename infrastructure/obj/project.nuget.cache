@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "pLLAmEHBKKwAvIFrPfWcl8ND25D0ZWYxBFgj0uiFtM/4DY882EA98q+uSgqWaZ6+XXnhcgGUg23gVsulz3ohUA==",
+  "dgSpecHash": "SPKupoqQGISGeuCmd5wcS5oLlJLebh1Dd0OX7ir+Bzr84pKhkKmSBKerEMeFW0DVIofM0W7EfmXfjqVNg67lnQ==",
   "success": true,
   "projectFilePath": "C:\\VSCode\\VisualStudioCode\\infrastructure\\infrastructure.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\lenovo\\.nuget\\packages\\mediatr\\12.2.0\\mediatr.12.2.0.nupkg.sha512",
+    "C:\\Users\\lenovo\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\lenovo\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

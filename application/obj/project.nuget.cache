@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "wlXNVYR++XDkXj3kyMf2lxqJAZuCDbDv7knGwQ9XiJwPNsj9iMA+yf5yG8HI+MBlHdTCSGP10EiB5bNt6Xtx4w==",
+  "dgSpecHash": "5CR/J/mULj0Rch4QfasxfgqY9SYiluEPf+qXN0xKQgsDNeloetlqfA5GbcLCsmdCrQ27KlX/lPSpMDYWXuLEmg==",
   "success": true,
   "projectFilePath": "C:\\VSCode\\VisualStudioCode\\application\\application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\lenovo\\.nuget\\packages\\mediatr\\12.2.0\\mediatr.12.2.0.nupkg.sha512",
+    "C:\\Users\\lenovo\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\lenovo\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

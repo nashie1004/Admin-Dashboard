@@ -1,0 +1,12 @@
+C:\VSCode\VisualStudioCode\infrastructure\bin\Debug\net7.0\infrastructure.deps.json
+C:\VSCode\VisualStudioCode\infrastructure\bin\Debug\net7.0\infrastructure.dll
+C:\VSCode\VisualStudioCode\infrastructure\bin\Debug\net7.0\infrastructure.pdb
+C:\VSCode\VisualStudioCode\infrastructure\obj\Debug\net7.0\infrastructure.csproj.AssemblyReference.cache
+C:\VSCode\VisualStudioCode\infrastructure\obj\Debug\net7.0\infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\VSCode\VisualStudioCode\infrastructure\obj\Debug\net7.0\infrastructure.AssemblyInfoInputs.cache
+C:\VSCode\VisualStudioCode\infrastructure\obj\Debug\net7.0\infrastructure.AssemblyInfo.cs
+C:\VSCode\VisualStudioCode\infrastructure\obj\Debug\net7.0\infrastructure.csproj.CoreCompileInputs.cache
+C:\VSCode\VisualStudioCode\infrastructure\obj\Debug\net7.0\infrastructure.dll
+C:\VSCode\VisualStudioCode\infrastructure\obj\Debug\net7.0\refint\infrastructure.dll
+C:\VSCode\VisualStudioCode\infrastructure\obj\Debug\net7.0\infrastructure.pdb
+C:\VSCode\VisualStudioCode\infrastructure\obj\Debug\net7.0\ref\infrastructure.dll

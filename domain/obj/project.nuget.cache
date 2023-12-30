@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JyVznBx+WIP53IbGVhks+dnvpJpzdRQjJzLXa4GP87ezzuvFXsf8zAUjgbTLJ307PlBAhrcgiC85gu9uWfwuMw==",
+  "dgSpecHash": "fJbZUHxsC1JBTuzqMDXRnetT92pbEECfsO49n5HuKMpP/Frdx1Tt9+VzfsMx71E9IL98gtmN2cqTQahyAIE1UQ==",
   "success": true,
-  "projectFilePath": "c:\\VSCode\\VisualStudioCode\\domain\\domain.csproj",
+  "projectFilePath": "C:\\VSCode\\VisualStudioCode\\domain\\domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -1,4 +1,5 @@
 # https://positiwise.com/blog/clean-architecture-net-core
+# https://www.youtube.com/watch?v=1OLSE6tX71Y
 
 # React + TypeScript + Vite
 

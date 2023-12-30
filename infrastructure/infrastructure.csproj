@@ -6,4 +6,16 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Common\" />
+    <Folder Include="Common\Context\" />
+    <Folder Include="Common\Migrations\" />
+    <Folder Include="User\Persistence\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\domain\domain.csproj" />
+    <ProjectReference Include="..\application\application.csproj" />
+  </ItemGroup>
+
 </Project>

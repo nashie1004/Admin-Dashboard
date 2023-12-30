@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net7.0": {}
+    "net7.0": {
+      "domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "domain/1.0.0": {
+      "type": "project",
+      "path": "../domain/domain.csproj",
+      "msbuildProject": "../domain/domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net7.0": []
+    "net7.0": [
+      "domain >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\lenovo\\.nuget\\packages\\": {}
@@ -33,7 +52,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\VSCode\\VisualStudioCode\\domain\\domain.csproj": {
+              "projectPath": "C:\\VSCode\\VisualStudioCode\\domain\\domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

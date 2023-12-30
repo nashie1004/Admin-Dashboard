@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\VSCode\\VisualStudioCode\\domain\\domain.csproj": {}
+    "C:\\VSCode\\VisualStudioCode\\domain\\domain.csproj": {}
   },
   "projects": {
-    "c:\\VSCode\\VisualStudioCode\\domain\\domain.csproj": {
+    "C:\\VSCode\\VisualStudioCode\\domain\\domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\VSCode\\VisualStudioCode\\domain\\domain.csproj",
+        "projectUniqueName": "C:\\VSCode\\VisualStudioCode\\domain\\domain.csproj",
         "projectName": "domain",
-        "projectPath": "c:\\VSCode\\VisualStudioCode\\domain\\domain.csproj",
+        "projectPath": "C:\\VSCode\\VisualStudioCode\\domain\\domain.csproj",
         "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
-        "outputPath": "c:\\VSCode\\VisualStudioCode\\domain\\obj\\",
+        "outputPath": "C:\\VSCode\\VisualStudioCode\\domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",

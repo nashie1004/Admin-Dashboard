@@ -6,6 +6,8 @@ namespace presentation;
 [Route("/api/[controller]")]
 public class ResourcesController : ControllerBase
 {
+    
+
     [HttpGet("/resources")]
     public IActionResult Resources()
     {

@@ -10,3 +10,8 @@ C:\VSCode\VisualStudioCode\infrastructure\obj\Debug\net7.0\infrastructure.dll
 C:\VSCode\VisualStudioCode\infrastructure\obj\Debug\net7.0\refint\infrastructure.dll
 C:\VSCode\VisualStudioCode\infrastructure\obj\Debug\net7.0\infrastructure.pdb
 C:\VSCode\VisualStudioCode\infrastructure\obj\Debug\net7.0\ref\infrastructure.dll
+C:\VSCode\VisualStudioCode\infrastructure\bin\Debug\net7.0\application.dll
+C:\VSCode\VisualStudioCode\infrastructure\bin\Debug\net7.0\domain.dll
+C:\VSCode\VisualStudioCode\infrastructure\bin\Debug\net7.0\domain.pdb
+C:\VSCode\VisualStudioCode\infrastructure\bin\Debug\net7.0\application.pdb
+C:\VSCode\VisualStudioCode\infrastructure\obj\Debug\net7.0\infrastructure.csproj.CopyComplete

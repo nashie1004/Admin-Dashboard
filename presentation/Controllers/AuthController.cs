@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using MediatR;
+using Microsoft.AspNetCore.Mvc;
 
 namespace presentation;
 
@@ -6,6 +7,13 @@ namespace presentation;
 [Route("/api/[controller]")]
 public class AuthController : ControllerBase
 {
+    private readonly IMediator _mediator;
+
+    public AuthController(IMediator mediator)
+    {
+        _mediator = mediator;
+    }
+
     [HttpGet("/register")]
     public IActionResult Register()
     {

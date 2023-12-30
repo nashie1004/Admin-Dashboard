@@ -1,0 +1,3 @@
+{
+    "ConnectionString": "Persist Security Info=False;User ID=*****;Password=*****;Initial Catalog=AdventureWorks;Server=MySqlServer"
+}

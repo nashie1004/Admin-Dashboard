@@ -31,3 +31,8 @@ C:\VSCode\VisualStudioCode\presentation\obj\Debug\net7.0\refint\presentation.dll
 C:\VSCode\VisualStudioCode\presentation\obj\Debug\net7.0\presentation.pdb
 C:\VSCode\VisualStudioCode\presentation\obj\Debug\net7.0\presentation.genruntimeconfig.cache
 C:\VSCode\VisualStudioCode\presentation\obj\Debug\net7.0\ref\presentation.dll
+C:\VSCode\VisualStudioCode\presentation\bin\Debug\net7.0\ConnectionStrings.json
+C:\VSCode\VisualStudioCode\presentation\bin\Debug\net7.0\application.dll
+C:\VSCode\VisualStudioCode\presentation\bin\Debug\net7.0\domain.dll
+C:\VSCode\VisualStudioCode\presentation\bin\Debug\net7.0\application.pdb
+C:\VSCode\VisualStudioCode\presentation\bin\Debug\net7.0\domain.pdb

@@ -103,7 +103,7 @@ export default function Register() {
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
-                <Link to={Paths.Auth + Paths.Login}>
+                <Link to={Paths.Login}>
                   Already have an account? Sign in
                 </Link>
               </Grid>

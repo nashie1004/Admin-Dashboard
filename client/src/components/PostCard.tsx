@@ -9,7 +9,7 @@ import ThumbDownIcon from '@mui/icons-material/ThumbDown';
 import { deepOrange } from '@mui/material/colors';
 import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
 
-export default function Post() {
+export default function PostCard() {
   return (
     <Card sx={{ mb: 2, display: 'flex',  }}>
 

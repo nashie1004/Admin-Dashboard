@@ -3,8 +3,11 @@ import SendIcon from '@mui/icons-material/Send';
 import AddIcon from '@mui/icons-material/Add';
 import ImageIcon from '@mui/icons-material/Image';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import { redirect, useNavigate } from 'react-router-dom';
+import { Paths } from '../../utils/constants';
 
-export default function RightSidebar() {
+export default function DashboardSidebar() {
+  const navigate = useNavigate();
 
   const dummySideBars: number[] = new Array(3).fill(0);
 
@@ -27,10 +30,14 @@ export default function RightSidebar() {
               }
           </Typography>
             <Stack direction="column" sx={{mt: 1}} spacing={2}>
-              <Button variant="contained" endIcon={<SendIcon />}>
+              <Button 
+              onClick={() => navigate(Paths.Post)}
+              variant="contained" endIcon={<SendIcon />}>
                 Create Post
               </Button>
-              <Button variant="outlined" endIcon={<AddIcon />}>
+              <Button 
+              onClick={() => navigate(Paths.Community)}
+              variant="outlined" endIcon={<AddIcon />}>
                 Create Community
               </Button>
             </Stack>

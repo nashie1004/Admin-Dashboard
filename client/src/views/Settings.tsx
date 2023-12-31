@@ -2,7 +2,6 @@ import { Backdrop, Button, CircularProgress, Container, CssBaseline, FormControl
 import Box from '@mui/material/Box';
 import SendIcon from '@mui/icons-material/Send';
 import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogTitle from '@mui/material/DialogTitle';
 import { DatePicker } from '@mui/x-date-pickers';
@@ -24,11 +23,6 @@ export default function Settings() {
         noValidate
         autoComplete="off"
       >
-        <CssBaseline />
-        <Typography variant="h6" gutterBottom color={'text.secondary'}>
-          Form Setting
-        </Typography>
-
         <Dialog disableEscapeKeyDown open={false} onClose={() => {}}>
           <DialogTitle>Fill the form</DialogTitle>
           <DialogContent></DialogContent>

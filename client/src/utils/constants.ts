@@ -1,12 +1,11 @@
 export enum Paths {
     Auth = '/auth',
-    Login = '/login',
-    Register = '/register',
-    ForgotPassword = '/forgotPassword',
+    Login = '/auth/login',
+    Register = '/auth/register',
+    ForgotPassword = '/auth/forgotPassword',
 
     Dashboard = '/',
     Community = '/community',
-    Discover = '/discover',
-    Manage = '/manage',
+    Post = '/post', // - view?, - create/
     Settings = '/settings',
 }

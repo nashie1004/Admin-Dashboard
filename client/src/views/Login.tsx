@@ -77,12 +77,12 @@ export default function LoginIn() {
             </Button>
             <Grid container>
               <Grid item xs>
-                <Link to={Paths.Auth + Paths.ForgotPassword}>
+                <Link to={Paths.ForgotPassword}>
                   Forgot password?
                 </Link>
               </Grid>
               <Grid item>
-                <Link to={Paths.Auth + Paths.Register}>
+                <Link to={Paths.Register}>
                   {"Don't have an account? Sign Up"}
                 </Link>
               </Grid>

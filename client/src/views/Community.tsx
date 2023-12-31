@@ -1,13 +1,13 @@
 import { Container } from '@mui/material'
 import React from 'react'
-import Loading from '../components/Loading'
+import SkeletonLoading from '../components/layout/SkeletonLoading'
 
 export default function Community() {
   return (
     <Container>
         community
 
-      <Loading />
+      <SkeletonLoading />
 
     </Container>
   )

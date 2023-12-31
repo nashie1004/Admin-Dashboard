@@ -46,7 +46,7 @@ export default function PostCard() {
           </Breadcrumbs>
           <Breadcrumbs separator="-" aria-label="breadcrumb">
             <Typography variant="caption">
-              {"/community"}
+              {"c/Community"}
             </Typography>
           </Breadcrumbs>
           <Breadcrumbs separator="-" aria-label="breadcrumb">
@@ -75,16 +75,16 @@ export default function PostCard() {
           quasi quidem quibusdam.
         </Typography>
 
-        <Box>
-          <IconButton 
-          title="Comments"
-          sx={{mb: 0, mr: 0, ml: 0, mt: 0}}>
+        <Stack direction={'row'} sx={{mt: 1}}>
+          <Breadcrumbs separator="-" aria-label="breadcrumb">
             <ChatBubbleOutlineIcon />
-          </IconButton>
-          <Typography variant="overline"  gutterBottom >
-          4 Comments
-          </Typography>
-        </Box>
+          </Breadcrumbs>
+          <Breadcrumbs separator="-" aria-label="breadcrumb" sx={{ml: 1}}>
+            <Typography variant="caption">
+              {"4 Comments"} 
+            </Typography>
+          </Breadcrumbs>
+        </Stack>
 
         </CardContent>
       </CardActionArea>

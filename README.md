@@ -33,6 +33,7 @@ VITE_REACT_APP_REPO_URL = ###
 - [Layers 4](https://positiwise.com/blog/clean-architecture-net-core) 
 - [Icon](https://favicon.io/emoji-favicons/fire/#google_vignette)
 - [Admin](https://wrapbootstrap.com/theme/materialpro-react-admin-template-WB0869819)
+- [Style](https://mui.com/material-ui/customization/palette/)
 
 
 # React + TypeScript + Vite

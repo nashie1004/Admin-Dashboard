@@ -5,23 +5,21 @@ import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
 import Icon from '../../assets/favicon-32x32.png'
 import { Switch, TextField, alpha, styled } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import InputBase from '@mui/material/InputBase';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Paths } from '../../utils/constants';
 
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function Topbar() {
+  const navigate = useNavigate();
+
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
 
@@ -107,7 +105,9 @@ function Topbar() {
               fontWeight: 800,
               color: 'inherit',
               textDecoration: 'none',
+              cursor: 'pointer'
             }}
+            onClick={() => navigate(Paths.Dashboard)}
           >
             SocialSphereX
           </Typography>

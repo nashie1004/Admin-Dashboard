@@ -15,7 +15,9 @@ export default function MainLayout() {
 
   return <>
     <LocalizationProvider dateAdapter={AdapterDayjs}>
-      <ThemeProvider theme={true ? defaultTheme : darkTheme}>
+      <ThemeProvider 
+      theme={true ? defaultTheme : darkTheme}
+      >
           
         <CssBaseline />
         <Topbar />

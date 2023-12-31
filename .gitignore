@@ -5,8 +5,5 @@ AppPackages/
 /application/obj/
 /presentation/bin/
 /presentation/obj/
-presentation/bin/Debug/net7.0/application.dll
-presentation/bin/Debug/net7.0/application.pdb
-presentation/bin/Debug/net7.0/presentation.deps.json
-presentation/bin/Debug/net7.0/presentation.dll
-presentation/bin/Debug/net7.0/presentation.pdb
+/domain/bin/
+/domain/obj/

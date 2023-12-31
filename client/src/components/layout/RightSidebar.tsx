@@ -1,8 +1,13 @@
-import { Box, Button, Card, CardActionArea, CardContent, CardHeader, CardMedia, Divider, List, ListItem, ListItemText, Paper, Stack, Typography } from '@mui/material'
+import { Avatar, Box, Button, Card, CardActionArea, CardContent, CardHeader, CardMedia, Divider, IconButton, List, ListItem, ListItemAvatar, ListItemText, Paper, Stack, Typography } from '@mui/material'
 import SendIcon from '@mui/icons-material/Send';
 import AddIcon from '@mui/icons-material/Add';
+import ImageIcon from '@mui/icons-material/Image';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
 export default function RightSidebar() {
+
+  const dummySideBars: number[] = new Array(3).fill(0);
+
   return (
     <Box>
       <Card sx={{
@@ -23,10 +28,10 @@ export default function RightSidebar() {
           </Typography>
             <Stack direction="column" sx={{mt: 1}} spacing={2}>
               <Button variant="contained" endIcon={<SendIcon />}>
-                Create Community
+                Create Post
               </Button>
               <Button variant="outlined" endIcon={<AddIcon />}>
-                Create Post
+                Create Community
               </Button>
             </Stack>
           </CardContent>
@@ -34,29 +39,33 @@ export default function RightSidebar() {
 
   <Card
     sx={{
-        minHeight: 300,
-        position: "sticky",
-        top: 100
+      position: "sticky",
+      top: 100
     }}>
-      <CardContent>
-        <Typography variant="h6" gutterBottom>Recent Posts</Typography>
+    <CardContent>
+      <Typography variant="h6" gutterBottom>Suggested Communities</Typography>
+        
+    <List dense>
 
-        <List component="nav" aria-label="mailbox folders">
-          <ListItem button>
-            <ListItemText primary="Inbox" />
-          </ListItem>
-          <Divider />
-          <ListItem button divider>
-            <ListItemText primary="Drafts" />
-          </ListItem>
-          <ListItem button>
-            <ListItemText primary="Trash" />
-          </ListItem>
-          <Divider light />
-          <ListItem button>
-            <ListItemText primary="Spam" />
-          </ListItem>
-        </List>
+      {dummySideBars.map((item, i) => (
+        <ListItem sx={{p: 0}} key={i}
+        secondaryAction={
+          <IconButton edge="end" title="Go to ##">
+            <ChevronRightIcon />
+          </IconButton>
+        }>
+          <ListItemAvatar>
+            <Avatar>
+              <ImageIcon />
+            </Avatar>
+          </ListItemAvatar>
+          <ListItemText primary={"Community 1"} secondary={"0 members"} />
+        </ListItem>
+      ))}
+      
+    </List>
+
+        
       </CardContent>
   </Card>
 {/* {sideBarRoutes.map((item, i) => (

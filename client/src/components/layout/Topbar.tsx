@@ -16,6 +16,8 @@ import Icon from '../../assets/favicon-32x32.png'
 import { Switch, TextField, alpha, styled } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import InputBase from '@mui/material/InputBase';
+import { Link } from 'react-router-dom';
+import { Paths } from '../../utils/constants';
 
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 

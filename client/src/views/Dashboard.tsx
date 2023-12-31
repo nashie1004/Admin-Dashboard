@@ -1,7 +1,8 @@
-import { Box, Button, Card, CardContent, Chip, Container, CssBaseline, Divider, Grid, InputLabel, MenuItem, Paper, Select, Stack, Typography } from '@mui/material';
+import { Box, Button, Card, CardContent, Chip, Container, CssBaseline, Divider, Grid, InputLabel, MenuItem, Paper, Select, Skeleton, Stack, Typography } from '@mui/material';
 import Post from '../components/Post';
 import {dashboardOrientation, filterButtons} from '../utils/other'
 import { useState } from 'react';
+import Loading from '../components/Loading';
 
 export default function Dashboard() {
   const [orientation, setOrientation] = useState<number>(1);
@@ -27,6 +28,7 @@ export default function Dashboard() {
               labelId="orientation-select-label"
               id="orientation-select"
               size='small'
+              value={orientation}
               >
                 {dashboardOrientation.map((item, i) => (
                   <MenuItem 
@@ -45,6 +47,8 @@ export default function Dashboard() {
       {dummyPosts.map((item, i) => (
         <Post key={i} />
       ))}
+
+      <Loading />
 
     </Container>
   )

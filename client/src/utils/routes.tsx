@@ -15,6 +15,7 @@ const ForgotPassword = lazy(() => import('../views/ForgotPassword'))
 
 import MainLayout from '../components/layout/MainLayout';
 import { ISideBarRoutes } from './types';
+import Community from '../views/Community';
 const Settings = lazy(() => import("../views/Settings"));
 const Discover = lazy(() => import("../views/Discover"));
 const Dashboard = lazy(() => import("../views/Dashboard"));
@@ -55,6 +56,10 @@ const routes = [
       {
         path: Paths.Dashboard,
         element: <Dashboard />,
+      },
+      {
+        path: Paths.Community,
+        element: <Community />,
       },
       {
         path: Paths.Discover,

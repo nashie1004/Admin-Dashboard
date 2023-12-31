@@ -5,6 +5,7 @@ export enum Paths {
     ForgotPassword = '/forgotPassword',
 
     Dashboard = '/',
+    Community = '/community',
     Discover = '/discover',
     Manage = '/manage',
     Settings = '/settings',

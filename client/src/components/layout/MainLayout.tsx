@@ -10,35 +10,43 @@ import Copyright from './Copyright';
 import { LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
 import { defaultTheme, darkTheme } from '../../utils/theme';
-import Drawer from './Drawer';
+import Topbar from './Topbar';
+import LeftSidebar from './LeftSidebar';
+import RightSidebar from './RightSidebar';
+import { Grid } from '@mui/material';
 
 export default function MainLayout() {
 
   return <>
     <LocalizationProvider dateAdapter={AdapterDayjs}>
       <ThemeProvider theme={defaultTheme}>
-        <Box sx={{ display: 'flex', width: 1 }}>
+        <Box >
           <CssBaseline />
-          <Drawer />
-          <Box
-            component="main"
+          <Topbar />
+          
+            <Grid container spacing={3}  justifyContent="center"
             sx={{
+              p: 4,
               backgroundColor: (theme) =>
                 theme.palette.mode === 'light'
                   ? theme.palette.grey[100]
                   : theme.palette.grey[900],
-              flexGrow: 1,
-              height: '100vh',
-              overflow: 'auto',
-            }}
-          >
-            <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
-              <React.Suspense fallback={<Loading />}>
-                <Outlet />
-                <Copyright sx={{ mb: 4, mt: 4 }} />
-              </React.Suspense>
-            </Container>
-          </Box>
+              }}
+            >
+              {/* <Grid item xs={2}>
+                <LeftSidebar />
+              </Grid> */}
+              <Grid item xs={7}>
+                <React.Suspense fallback={<Loading />}>
+                  <Outlet />
+                  {/* <Copyright sx={{ mb: 7, mt: 7 }} /> */}
+                </React.Suspense>
+              </Grid>
+              <Grid item xs={3}>
+                <RightSidebar />
+              </Grid>
+            </Grid>
+          
         </Box>
       </ThemeProvider>
     </LocalizationProvider>

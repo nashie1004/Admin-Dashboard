@@ -6,6 +6,7 @@ Ref
 - [Layers 3](https://juldhais.net/clean-architecture-in-asp-net-core-web-api-4e5ef0b96f99)
 - [Layers 4](https://positiwise.com/blog/clean-architecture-net-core) 
 - [Icon](https://favicon.io/emoji-favicons/fire/#google_vignette)
+- [Admin](https://wrapbootstrap.com/theme/materialpro-react-admin-template-WB0869819)
 
 # React + TypeScript + Vite
 

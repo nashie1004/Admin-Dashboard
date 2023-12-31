@@ -1,6 +1,6 @@
 import { Box, CssBaseline, Skeleton, Stack, Typography } from '@mui/material';
-import Backdrop from '../../components/Backdrop';
-import Dialog from '../../components/Dialog';
+import Backdrop from '../components/Backdrop';
+import Dialog from '../components/Dialog';
 
 export default function Discover() {
   return <Box>

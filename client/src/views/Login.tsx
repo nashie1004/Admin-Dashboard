@@ -10,8 +10,8 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { Link } from 'react-router-dom';
-import Copyright from '../../components/layout/Copyright';
-import { Paths } from '../../utils/constants';
+import Copyright from '../components/layout/Copyright';
+import { Paths } from '../utils/constants';
 // TODO remove, this demo shouldn't need to reset the theme.
 
 

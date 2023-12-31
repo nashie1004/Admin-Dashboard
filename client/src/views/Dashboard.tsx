@@ -1,8 +1,8 @@
 import { Box, CssBaseline, Grid, Paper, Typography } from '@mui/material';
-import Deposits from '../../components/Deposits';
-import Orders from '../../components/Orders';
-import LinearChart from '../../components/LineChart';
-import PieChart from '../../components/Chart';
+import Deposits from '../components/Deposits';
+import Orders from '../components/Orders';
+import LinearChart from '../components/LineChart';
+import PieChart from '../components/Chart';
 
 export default function Dashboard() {
 

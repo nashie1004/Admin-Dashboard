@@ -12,8 +12,8 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import Copyright from '../../components/layout/Copyright';
-import { Paths } from '../../utils/constants';
+import Copyright from '../components/layout/Copyright';
+import { Paths } from '../utils/constants';
 
 export default function Register() {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {

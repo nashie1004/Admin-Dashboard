@@ -9,15 +9,16 @@ import BarChartIcon from '@mui/icons-material/BarChart';
 import LayersIcon from '@mui/icons-material/Layers';
 
 import AuthLayout from '../components/layout/AuthLayout';
-const Register = lazy(() => import('../views/register/Register'))
-const Login = lazy(() => import('../views/login/Login'))
-const ForgotPassword = lazy(() => import('../views/forgotPassword/ForgotPassword'))
+const Register = lazy(() => import('../views/Register'))
+const Login = lazy(() => import('../views/Login'))
+const ForgotPassword = lazy(() => import('../views/ForgotPassword'))
 
 import MainLayout from '../components/layout/MainLayout';
-const Settings = lazy(() => import("../views/settings/Settings"));
-const Discover = lazy(() => import("../views/discover/Discover"));
-const Dashboard = lazy(() => import("../views/dashboard/Dashboard"));
-const Manage = lazy(() => import("../views/manage/Manage"));
+import { SideBarRoutes } from './types';
+const Settings = lazy(() => import("../views/Settings"));
+const Discover = lazy(() => import("../views/Discover"));
+const Dashboard = lazy(() => import("../views/Dashboard"));
+const Manage = lazy(() => import("../views/Manage"));
 
 const ErrorPage = lazy(() => import("../components/layout/ErrorPage"));
 

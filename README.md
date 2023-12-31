@@ -1,6 +1,11 @@
-# https://positiwise.com/blog/clean-architecture-net-core
-# https://www.youtube.com/watch?v=1OLSE6tX71Y
-# https://juldhais.net/clean-architecture-in-asp-net-core-web-api-4e5ef0b96f99
+# SocialSphereX
+
+Ref
+- [Layers 1](https://positiwise.com/blog/clean-architecture-net-core)
+- [Layers 2](https://www.youtube.com/watch?v=1OLSE6tX71Y) 
+- [Layers 3](https://juldhais.net/clean-architecture-in-asp-net-core-web-api-4e5ef0b96f99)
+- [Layers 4](https://positiwise.com/blog/clean-architecture-net-core) 
+- [Icon](https://favicon.io/emoji-favicons/fire/#google_vignette)
 
 # React + TypeScript + Vite
 

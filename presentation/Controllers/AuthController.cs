@@ -7,12 +7,12 @@ namespace presentation;
 [Route("/api/[controller]")]
 public class AuthController : ControllerBase
 {
-    private readonly IMediator _mediator;
+    // private readonly IMediator _mediator; //
 
-    public AuthController(IMediator mediator)
-    {
-        _mediator = mediator;
-    }
+    // public AuthController(IMediator mediator)
+    // {
+    //     _mediator = mediator;
+    // }
 
     [HttpGet("/register")]
     public IActionResult Register()

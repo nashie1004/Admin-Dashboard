@@ -20,13 +20,25 @@ public class AuthController : ControllerBase
         return Ok("Hello world");
     }
 
+    [HttpPost("/register")]
+    public IActionResult Register(string test)
+    {
+        return Ok("Hello world");
+    }
+
     [HttpGet("/login")]
     public IActionResult Login()
     {
         return Ok("Hello world");
     }
+
+    [HttpPost("/login")]
+    public IActionResult Login(string test)
+    {
+        return Ok("Hello world");
+    }
     
-    [HttpGet("/forgotPassword")]
+    [HttpPost("/forgotPassword")]
     public IActionResult ForgotPassword()
     {
         return Ok("Hello world");

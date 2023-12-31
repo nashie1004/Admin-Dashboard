@@ -1,10 +1,10 @@
-import { Box } from '@mui/material'
+import { Box, Container } from '@mui/material'
 import React from 'react'
 
 export default function ForgotPassword() {
   return (
-    <Box>
+    <Container>
         fogot password
-    </Box>
+    </Container>
   )
 }

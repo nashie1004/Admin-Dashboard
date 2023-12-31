@@ -14,7 +14,7 @@ const Login = lazy(() => import('../views/Login'))
 const ForgotPassword = lazy(() => import('../views/ForgotPassword'))
 
 import MainLayout from '../components/layout/MainLayout';
-import { SideBarRoutes } from './types';
+import { ISideBarRoutes } from './types';
 const Settings = lazy(() => import("../views/Settings"));
 const Discover = lazy(() => import("../views/Discover"));
 const Dashboard = lazy(() => import("../views/Dashboard"));
@@ -73,7 +73,7 @@ const routes = [
 ]
 
 // Sidebar links
-const sideBarRoutes: SideBarRoutes[] = [
+const sideBarRoutes: ISideBarRoutes[] = [
   {
     routePath: Paths.Dashboard,
     routeName: "Dashboard",

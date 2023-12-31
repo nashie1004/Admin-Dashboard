@@ -15,7 +15,7 @@ export default function Settings() {
   }
 
   return (
-    <>
+    <Container>
       <Box
         component="form"
         sx={{
@@ -162,6 +162,6 @@ export default function Settings() {
             </Button>
         </Paper>
       </Box>
-    </>
+    </Container>
   )
 }

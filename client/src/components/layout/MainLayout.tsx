@@ -26,7 +26,7 @@ export default function MainLayout() {
           
             <Grid container spacing={3}  justifyContent="center"
             sx={{
-              p: 4,
+              p: 2,
               backgroundColor: (theme) =>
                 theme.palette.mode === 'light'
                   ? theme.palette.grey[100]

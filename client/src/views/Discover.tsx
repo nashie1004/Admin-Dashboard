@@ -1,9 +1,9 @@
-import { Box, CssBaseline, Skeleton, Stack, Typography } from '@mui/material';
+import { Box, Container, CssBaseline, Skeleton, Stack, Typography } from '@mui/material';
 import Backdrop from '../components/Backdrop';
 import Dialog from '../components/Dialog';
 
 export default function Discover() {
-  return <Box>
+  return <Container>
     <CssBaseline />
     <Typography variant="h6" gutterBottom color={'text.secondary'}>
       Discover
@@ -21,5 +21,5 @@ export default function Discover() {
       <Skeleton variant="rectangular" width={210} height={60} />
       <Skeleton variant="rounded" width={210} height={60} />
     </Stack>
-</Box>;
+</Container>;
 }

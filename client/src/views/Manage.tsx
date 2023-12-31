@@ -1,5 +1,5 @@
 import { DataGrid, GridToolbar, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
-import { Box, CssBaseline, Dialog, Grid, LinearProgress, Paper, Typography } from '@mui/material';
+import { Box, Container, CssBaseline, Dialog, Grid, LinearProgress, Paper, Typography } from '@mui/material';
 import { useDemoData } from '@mui/x-data-grid-generator';
 
 const columns: GridColDef[] = [
@@ -54,13 +54,12 @@ export default function Manage() {
   });
 
   return (
-    <Box>
+    <Container>
     <CssBaseline />
     <Typography variant="h6" gutterBottom color={'text.secondary'}>
       Manage
     </Typography>
 
-        <Grid item xs={12} md={4} lg={3}>
           <Paper
             sx={{
               display: 'flex',
@@ -92,9 +91,8 @@ export default function Manage() {
                   }}
             />
           </Paper>
-        </Grid>
 
         
-    </Box>
+    </Container>
   );
 }

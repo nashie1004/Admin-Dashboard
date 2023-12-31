@@ -1,17 +1,50 @@
-import { Box, Button, Chip, Container, CssBaseline, Divider, Grid, Paper, Stack, Typography } from '@mui/material';
-
+import { Box, Button, Card, CardContent, Chip, Container, CssBaseline, Divider, Grid, InputLabel, MenuItem, Paper, Select, Stack, Typography } from '@mui/material';
 import Post from '../components/Post';
-import CreatePost from '../components/CreatePost';
+import {dashboardOrientation, filterButtons} from '../utils/other'
+import { useState } from 'react';
 
 export default function Dashboard() {
+  const [orientation, setOrientation] = useState<number>(1);
+
+  const dummyPosts: number[] = new Array(3).fill(0);
 
   return (
     <Container>
     <CssBaseline />
 
-      <CreatePost />
-      <Post />
-      <Post />
+      <Card sx={{mb: 2}}>
+        <CardContent>
+          <Stack direction="row" spacing={1} >
+
+            {filterButtons.map((item, i) => (
+              <Button variant="outlined" size="small" key={i}
+              startIcon={item.btnComponent}>
+                {item.btnTitle}
+              </Button>
+            ))}         
+
+            <Select sx={{mx: "auto"}}
+              labelId="orientation-select-label"
+              id="orientation-select"
+              size='small'
+              >
+                {dashboardOrientation.map((item, i) => (
+                  <MenuItem 
+                  onClick={() => setOrientation(item.btnValue)}
+                  value={item.btnValue} 
+                  key={i}>
+                    <Typography>{item.btnTitle}</Typography>
+                  </MenuItem>
+                ))}
+            </Select>
+
+          </Stack>
+        </CardContent>
+      </Card>
+        
+      {dummyPosts.map((item, i) => (
+        <Post key={i} />
+      ))}
 
     </Container>
   )

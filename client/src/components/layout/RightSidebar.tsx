@@ -1,7 +1,6 @@
 import { Box, Button, Card, CardActionArea, CardContent, CardHeader, CardMedia, Divider, List, ListItem, ListItemText, Paper, Stack, Typography } from '@mui/material'
-import React from 'react'
-import DeleteIcon from '@mui/icons-material/Delete';
 import SendIcon from '@mui/icons-material/Send';
+import AddIcon from '@mui/icons-material/Add';
 
 export default function RightSidebar() {
   return (
@@ -15,50 +14,51 @@ export default function RightSidebar() {
           src="https://picsum.photos/seed/picsum/200/300"
           alt="Paella dish"
         />
-        <CardHeader
-        title="Home"
-        subheader={
-          <Typography variant="body2" color="default" >
+          <CardContent>
+            <Typography variant="h6" gutterBottom>Home</Typography>
+          <Typography variant="body2" color="default" gutterBottom>
               {
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, fugit."
+              "Your personal SocialSphereX frontpage. Come here to check in with your favorite communities"  
               }
           </Typography>
-        }> 
-          
-        </CardHeader>
-          <CardContent>
-            <Stack direction="column">
+            <Stack direction="column" sx={{mt: 1}} spacing={2}>
               <Button variant="contained" endIcon={<SendIcon />}>
                 Create Community
+              </Button>
+              <Button variant="outlined" endIcon={<AddIcon />}>
+                Create Post
               </Button>
             </Stack>
           </CardContent>
       </Card>
 
-    <Paper
-        sx={{
-            p: 1,
-            height: 300,
-            position: "sticky",
-            top: 100
-        }}
-          >
-<List  component="nav" aria-label="mailbox folders">
-      <ListItem button>
-        <ListItemText primary="Inbox" />
-      </ListItem>
-      <Divider />
-      <ListItem button divider>
-        <ListItemText primary="Drafts" />
-      </ListItem>
-      <ListItem button>
-        <ListItemText primary="Trash" />
-      </ListItem>
-      <Divider light />
-      <ListItem button>
-        <ListItemText primary="Spam" />
-      </ListItem>
-    </List>
+  <Card
+    sx={{
+        minHeight: 300,
+        position: "sticky",
+        top: 100
+    }}>
+      <CardContent>
+        <Typography variant="h6" gutterBottom>Recent Posts</Typography>
+
+        <List component="nav" aria-label="mailbox folders">
+          <ListItem button>
+            <ListItemText primary="Inbox" />
+          </ListItem>
+          <Divider />
+          <ListItem button divider>
+            <ListItemText primary="Drafts" />
+          </ListItem>
+          <ListItem button>
+            <ListItemText primary="Trash" />
+          </ListItem>
+          <Divider light />
+          <ListItem button>
+            <ListItemText primary="Spam" />
+          </ListItem>
+        </List>
+      </CardContent>
+  </Card>
 {/* {sideBarRoutes.map((item, i) => (
 
 <>
@@ -84,7 +84,6 @@ export default function RightSidebar() {
 </>
   
 ))} */}
-          </Paper>
     </Box>
   )
 }

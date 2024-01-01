@@ -58,7 +58,7 @@ export default function PostCard() {
           
         <Box sx={{mb: 1}}>
           <Stack spacing={1} direction={"row"}>
-            <Typography variant="h5" component="div">
+            <Typography variant="h6" component="div">
               Lorem, ipsum dolor.
             </Typography>
             <Chip size="small" label="Chip Filled" />

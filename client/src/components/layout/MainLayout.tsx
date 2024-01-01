@@ -1,4 +1,3 @@
-import * as React from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider } from '@mui/material/styles';
 import { Outlet } from 'react-router-dom';
@@ -10,18 +9,21 @@ import { defaultTheme, darkTheme } from '../../utils/theme';
 import Topbar from './Topbar';
 import MainSubLayout from './MainSubLayout';
 import SkeletonLoadingSidebar from './SkeletonLoadingSidebar';
+import { userThemeStore } from '../../hooks/useThemeStore';
+import { Suspense } from 'react';
 
 export default function MainLayout() {
+  const theme = userThemeStore((state) => state.theme)
 
   return <>
     <LocalizationProvider dateAdapter={AdapterDayjs}>
       <ThemeProvider 
-      theme={true ? defaultTheme : darkTheme}
+      theme={theme === "LIGHT" ? defaultTheme : darkTheme}
       >
           
         <CssBaseline />
         <Topbar />
-        <React.Suspense 
+        <Suspense 
         fallback={
           <MainSubLayout 
             Main={<SkeletonLoading />} 
@@ -29,7 +31,7 @@ export default function MainLayout() {
           />
         }>
           <Outlet />
-        </React.Suspense>
+        </Suspense>
 
       </ThemeProvider>
     </LocalizationProvider>

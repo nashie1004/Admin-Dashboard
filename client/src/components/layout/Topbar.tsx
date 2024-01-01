@@ -14,11 +14,13 @@ import SearchIcon from '@mui/icons-material/Search';
 import InputBase from '@mui/material/InputBase';
 import { Link, useNavigate } from 'react-router-dom';
 import { Paths } from '../../utils/constants';
+import { userThemeStore } from '../../hooks/useThemeStore';
 
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function Topbar() {
   const navigate = useNavigate();
+  const setTheme = userThemeStore((state) => state.setTheme);
 
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
@@ -122,7 +124,7 @@ function Topbar() {
             />
           </Search>
 
-          <Switch defaultChecked color="default" />
+          <Switch defaultChecked color="default" onChange={setTheme} />
 
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">

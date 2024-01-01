@@ -12,7 +12,7 @@ const Login = lazy(() => import('../views/Login'))
 const ForgotPassword = lazy(() => import('../views/ForgotPassword'))
 const Settings = lazy(() => import("../views/Settings"));
 const Dashboard = lazy(() => import("../views/Dashboard"));
-const Post = lazy(() => import("../views/Post"));
+const Post = lazy(() => import("../views/CreatePost"));
 const Community = lazy(() => import("../views/Community"));
 const ErrorPage = lazy(() => import("../views/Error"));
 

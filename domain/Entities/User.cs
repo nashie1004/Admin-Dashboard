@@ -1,8 +1,11 @@
 ﻿namespace domain;
-public class User
+public class User : Audit
 {
-    public int UserId { get; set; }
-    public string Name { get; set; }
-    public DateTime Birthday { get; set; }
-    public int Age { get; set; }
+    public long UserId { get; set; }
+    public string UserName { get; set; }    
+    public string HashedPassword { get; set; }
+    public string Avatar { get; set; }  
+    public DateTime RegisterDate { get; set; }
+    public decimal Karma { get; set; }
+    public string Bio { get; set; }
 }

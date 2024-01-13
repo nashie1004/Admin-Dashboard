@@ -2,6 +2,9 @@
 
 Reddit clone with Vite React, Typescript and C#.
 
+## Entities
+[DB Entities/Model Diagram](https://dbdiagram.io/d/SocialSphereX-65a2abbeac844320aed8baf2)
+
 ## Start
 1. Setup ``.\client\.env`` 
 ```
@@ -34,7 +37,6 @@ VITE_REACT_APP_REPO_URL = ###
 - [Icon](https://favicon.io/emoji-favicons/fire/#google_vignette)
 - [Admin](https://wrapbootstrap.com/theme/materialpro-react-admin-template-WB0869819)
 - [Style](https://mui.com/material-ui/customization/palette/)
-
 
 # React + TypeScript + Vite
 

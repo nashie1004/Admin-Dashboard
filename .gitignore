@@ -7,3 +7,5 @@ AppPackages/
 /presentation/obj/
 /domain/bin/
 /domain/obj/
+/test/bin/
+/test/obj/

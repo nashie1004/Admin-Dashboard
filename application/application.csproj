@@ -5,11 +5,23 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\Resources\" />
+    <PackageReference Include="MediatR" Version="12.2.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="MediatR" Version="12.2.0" />
+    <Folder Include="Features\Auth\" />
+    <Folder Include="Features\Comments\" />
+    <Folder Include="Features\Comments\Commands\" />
+    <Folder Include="Features\Comments\Queries\" />
+    <Folder Include="Features\Community\Commands\" />
+    <Folder Include="Features\Post\" />
+    <Folder Include="Features\Post\Commands\" />
+    <Folder Include="Features\Post\Queries\" />
+    <Folder Include="Features\Reply\" />
+    <Folder Include="Features\Reply\Commands\" />
+    <Folder Include="Features\Reply\Queries\" />
+    <Folder Include="Features\User\Commands\" />
+    <Folder Include="Features\User\Commands\UpdateUser\" />
   </ItemGroup>
 
   <PropertyGroup>

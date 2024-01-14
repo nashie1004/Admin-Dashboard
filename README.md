@@ -37,6 +37,8 @@ VITE_REACT_APP_REPO_URL = ###
 - [Icon](https://favicon.io/emoji-favicons/fire/#google_vignette)
 - [Admin](https://wrapbootstrap.com/theme/materialpro-react-admin-template-WB0869819)
 - [Style](https://mui.com/material-ui/customization/palette/)
+- [Clean Architecture 1](https://github.com/juldhais/CleanArchitecture/blob/master/CleanArchitecture.Persistence/Repositories/UserRepository.cs)
+- [Clean Architecture 2](https://github.com/jasontaylordev/CleanArchitecture/blob/main/src/Application/Common/Interfaces/IApplicationDbContext.cs)
 
 # React + TypeScript + Vite
 

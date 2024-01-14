@@ -8,4 +8,8 @@ public interface ICommunityRepository : IBaseRepository<Community>
     ICollection<CommunityGuideline> GetCommunityGuidelines(long communityId);
     ICollection<CommunityFlair> GetCommunityFlairs(long communityId);
     bool CreateCommunityFlairs(ICollection<CommunityFlair> communityFlairs);
+    bool AddCommunityModerator(CommunityModerators communityModerator);
+    bool UpdateCommunityGenre(ICollection<CommunityGenre> communityGenres);
+    bool AddCommunityReport(CommunityReport communityReport);
+    bool AddCommunityGuideline(CommunityGuideline communityGuideline);
 }
